@@ -18,6 +18,7 @@ export class UserForm extends Component {
         this.props.addDetails(this.state.name, this.state.dep, this.state.rating);
         document.getElementById("form").style.display = "none";
         document.getElementById("details").style.display = "flex";
+        document.getElementById("btn").style.display = "block";
     }
 
     render() {

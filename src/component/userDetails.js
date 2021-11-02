@@ -5,6 +5,7 @@ export class UserDetails extends Component {
     showDetails = () => {
         document.getElementById("form").style.display = "block"
         document.getElementById("details").style.display = "none"
+        document.getElementById("btn").style.display = "none"
     }
 
     render() {
@@ -23,7 +24,7 @@ export class UserDetails extends Component {
 
                     })}
                 </div>
-                <center className="back-btn" onClick={this.showDetails} >Back</center>
+                <center> <button id="btn" className="back-btn" onClick={this.showDetails}> Back </button></center>
             </>
         );
 
