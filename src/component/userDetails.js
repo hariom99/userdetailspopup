@@ -8,21 +8,23 @@ export class UserDetails extends Component {
     }
 
     render() {
-        console.log(this.props.details);
+        // console.log(this.props.details);
         return (
-            <div id="details" className="details" >
+            <>
+                <div id="details" className="details" >
 
 
-                {this.props.details.map((val, key) => {
-                    return <div className="user" key={key} >
-                        Name : {val.name} |
-                        Department : {val.dep} |
-                        Rating : {val.rating}
-                    </div>
+                    {this.props.details.map((val, key) => {
+                        return <div className="user" key={key} >
+                            Name : {val.name} |
+                            Department : {val.dep} |
+                            Rating : {val.rating}
+                        </div>
 
-                })}
-                <center className="submit-btn" onclick={this.showDetails} >Back</center>
-            </div>
+                    })}
+                </div>
+                <center className="back-btn" onClick={this.showDetails} >Back</center>
+            </>
         );
 
     }
